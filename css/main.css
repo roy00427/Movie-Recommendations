@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro');
+
+/*************************
+DEFAULT
+*************************/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size:20px ;
+    font-family: sans-serif;
+    line-height: 1.5;
+    }
+body{
+    background-color: lightgrey;
+}
+
+h1{
+	font-size: 30px;
+    padding-bottom: 2rem;
+	font-family: serif;
+    
+}
+h2{
+	font-size: 25px;
+	font-family:serif;
+	text-align: center;
+}
+h4{
+	font-size: 30px;
+	font-family: serif;
+	text-align: center;
+}
+p{
+	font-size:18px ;
+    font-family: sans-serif;
+	text-align: center;
+}
+section{
+    padding: 1rem 0;
+}
+button {
+		width:10rem;
+		height:2.5rem;
+	background-color: darkblue;
+	font-size: 1rem;
+	float: right;
+	color:white;
+	}
+/*******************************
+NAVIGATION
+********************************/
+.page{
+    display:none;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+.page.active{
+    display:block;
+    padding: 3rem;
+}
+.movie{
+	margin-bottom: 2rem;
+	box-shadow: 10px 5px 5px darkblue;
+	
+	}
+
+.not{
+    display: none;
+}
+
+#back-button{
+	transform: scale(-100%)
+}
+/*******************************
+SEARCH BAR
+********************************/
+.search{
+    position:absolute;
+    z-index: 100;
+    top:0;
+    right: 0;
+    left: 0;
+    height:1rem;
+	justify-content:center;
+	padding-top:12px;
+}
+.searchbar.page{
+	transform:translateY(10%);
+}
+
+.searchbar.page.active{
+	transform:translateX(0);
+}
+#search-input{
+    
+    position: absolute;
+    
+	padding:2rem;
+    height: 3rem;
+    left: 0;
+    top: 0;
+    right:1.25rem;
+    width: 40%;
+    padding: 0 1rem;
+    font-size: 1.8rem;
+    background-color: darkblue;
+    color: white;
+	display:inline;
+	margin-left: 12.5rem;
+	
+	
+}
+
+#search-button{
+    position: absolute;
+    background-color: white;
+    z-index: 120;
+    height:3rem;
+    width: 10%;
+    right: 3rem;
+    top: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+	}
+
+#back-button{
+	position: absolute;
+	width:10%;
+	background-color: white;
+	height: 3rem;
+	z-index: 120;
+    left:3rem;
+    top: 0;
+    padding: 0.5rem;
+	
+}
+#search-img{
+	width:2rem;
+}
+/*******************************
+SEARCH RESULTS
+********************************/
+.movie {
+    max-width: 800px;
+    padding: 2rem;
+    border: 1px solid black;
+    overflow:auto;/* make theborder wrap floated children*/
+    clear: both;
+	
+}
+.movie:hover{
+  
+  transform:scale(1.1);
+  
+  transform:translate(50px,25px);
+    z-index: 100;
+  }
+	
+
+.poster{
+    float:left;
+    margin: 0 0.5rem 0.5rem 0;
+    width: 150px;
+    height: auto;
+    min-height: 150px;
+}
+.movie-title{
+    font-size: 2rem;
+    color: #333;
+}
+.movie-desc{
+  font-size: 1rem;
+color: #999;
+}
+.attribution{
+    text-align: center;
+    
+}
+.attribution img{
+    width:80%;
+    height: auto;
+    transform:rotate(0deg);
+    transition: transform 
+    }
+.attribution img:hover{
+   transform:rotate(360deg);
+	
+  }
+
+
+/*******************************
+MEDIA QUERRY
+*******************************/
+
+.loading {
+    display: none;
+}
+
+
+@media screen and (min-width:850px){
+    .attribution{
+        margin-top: 35%;
+    }
+    
+    #search-input {
+    font-size: 1rem;
+}
+@media screen and (min-width:1200px){
+	.movie{width:50%;
+	float: left;}
+    .page{
+        margin: 6rem 11rem;
+    }
+    #search-input{
+        width: 70%;
+    }
+    .attribution{
+        margin-top: 25%;
+    }
+}
+	
+/*******************************
+RECOMMENDATION
+********************************/
+
+
+    
+    
+/*****************************
+FOOTER
+******************************/
+    
